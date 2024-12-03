@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="index.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200..800;1,200..800&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Karla:ital,wght@0,200..800;1,200..800&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        <h1>Generate a <br><span id="header-highlight">random password</span></h1>
+        <p>Never use an insecure password again.</p>
+        <div id="pwOptions-div">
+            <div class="pwOption">
+                <label for="length-select">Password length:</label>
+                <select name="password-length" id="length-select">
+                    <option value="6">6</option>
+                    <option value="7">7</option>
+                    <option value="8">8</option>
+                    <option value="9">9</option>
+                    <option value="10">10</option>
+                    <option value="11">11</option>
+                    <option value="12">12</option>
+                    <option value="13">13</option>
+                    <option value="14">14</option>
+                    <option value="15" selected>15</option>
+                    <option value="16">16</option>
+                    <option value="17">17</option>
+                    <option value="18">18</option>
+                    <option value="19">19</option>
+                    <option value="20">20</option>
+                    <option value="21">21</option>
+                    <option value="22">22</option>
+                    <option value="23">23</option>
+                    <option value="24">24</option>
+                    <option value="25">25</option>
+                </select>
+            </div>
+            <div class="pwOption">
+                <label for="specialchar-checkbox">Include special characters</label>
+                <input type="checkbox" id="specialchar-checkbox" value="true" checked>
+            </div>
+        </div>
+        <button id="generate-btn">Generate passwords</button>
+        <hr/>
+        <div id="output-div">
+            <div class="pwcontainer">
+                <div id="pw1-div"></div>
+                <button id="copyPw1-btn" onclick="copyPw('pw1-div')">📋</button>
+            </div>
+            <div class="pwcontainer">
+                <div id="pw2-div"></div>
+                <button id="copyPw2-btn" onclick="copyPw('pw2-div')">📋</button>
+            </div>
+        </div>
+        <script src="index.js"></script>
+    </body>
+</html>
